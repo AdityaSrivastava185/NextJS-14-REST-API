@@ -2,8 +2,9 @@ import Image from "next/image";
 export default async function Home() {
  
   return (
-    <div>
-      This is the Docs Project 
-    </div>
+   <div>
+    Hello World
+   </div>
+   
   );
 }

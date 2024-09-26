@@ -31,7 +31,9 @@ export default function RootLayout({
         className={cn("relative h-full font-sans antialiased")}
       >
         <main className="relative flex flex-col min-h-screen">
-        {children}
+        <div className="flex-grow flex-1">
+          {children}
+        </div>
         </main>
       </body>
     </html>
