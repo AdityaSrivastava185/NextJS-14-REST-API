@@ -1,8 +1,29 @@
 import { Button, buttonVariants } from "@/components/ui/button";
+import { ArrowDown01Icon, ArrowDownToLine, CheckCircle, LeafIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+const perks = [
+  {
+    name : 'Instant Delivery',
+    Icon : ArrowDownToLine,
+    description : "Get your assests delivered to your email in seconds"
+  },
+  {
+    name : 'Guranteed Qulaity',
+    Icon : CheckCircle,
+    description : "Every asset is verified by out team to ensure the highest quality"
+  },
+  {
+    name : 'For the Animals',
+    Icon : LeafIcon,
+    description : "We have pledged 1% of salws to the preservation of the animals and environment"
+  },
+]
+
 export default async function Home() {
   return (
+    <>
     <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -16,5 +37,29 @@ export default async function Home() {
         </div>
       </div>
     </div>
+    <section className="border-t border-gray-200 bg-gray-50">
+    <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20 py-20">
+      <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
+        {perks.map((perk) =>(
+          <div key={perk.name} className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div className="md:flex-shrink-0 flex justify-center">
+              <div className="h-16 w-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-900">
+                {<perk.Icon className="w-1/3 h-1/3"/>}
+              </div>
+            </div>
+            <div className="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+              <h3 className="text-base font-medium text-gray-900">
+                {perk.name}
+              </h3>
+              <p className="mt-3 text-sm text-gray-900">
+                {perk.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </section>
+    </>
   );
 }
