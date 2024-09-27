@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { CgNametag } from "react-icons/cg";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={cn("relative h-full font-sans antialiased")}
       >
         <main className="relative flex flex-col min-h-screen">
+          <Navbar/>
         <div className="flex-grow flex-1">
           {children}
         </div>

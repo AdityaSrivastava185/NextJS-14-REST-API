@@ -24,7 +24,7 @@ const perks = [
 export default async function Home() {
   return (
     <>
-    <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
+    <div className="maxWidthWrapper mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Your marketplace for high-quality
@@ -38,7 +38,7 @@ export default async function Home() {
       </div>
     </div>
     <section className="border-t border-gray-200 bg-gray-50">
-    <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20 py-20">
+    <div className="maxWidthWrapper mx-auto w-full max-w-screen-xl px-2.5 md:px-20 py-20">
       <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
         {perks.map((perk) =>(
           <div key={perk.name} className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
