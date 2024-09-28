@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Icons } from "./Icons"
-import { NavItem } from "./NavItems"
+import NavItems from "./NavItems"
 
 const Navbar = () => {
     return(
@@ -15,12 +15,11 @@ const Navbar = () => {
                             <Icons.logo className="h-10 w-10"/>
                             </Link>
                         </div>
-                        <div className="hidden z-5- lg:ml-8 lg:block lg:self-stretch">
-                          
+                        <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
+                            <NavItems/>
                         </div>
                     </div>
                 </div>
-
             </div>
             </header>
         </div>
